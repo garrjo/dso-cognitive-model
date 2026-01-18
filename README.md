@@ -1,150 +1,207 @@
-# DS2 - Dual-Structure Intelligence Assessment
+# DS2 - Dual-Structure Cognitive Model
 
-A behavioral marker assessment tool that evaluates cognitive architecture across two complementary dimensions: **Analytical Mechanics Intelligence (AMI)** and **Conceptual Morphogenesis Intelligence (CMI)**.
+A cognitive architecture framework that maps intelligence across two complementary dimensions: **Analytical Mechanics Intelligence (AMI)** and **Conceptual Morphogenesis Intelligence (CMI)**.
 
-## Live Demo
+## Live Assessment
 
-**[Take the Assessment](https://yourusername.github.io/ds2-assessment/)**
+**[Take the Assessment](https://garrjo.github.io/dso-cognitive-model/)**
 
-## Overview
+---
 
-DS2 maps your cognitive profile onto a dual-axis framework:
+## The Model
+
+DS2 provides a dual-axis framework for understanding cognitive style:
+
+```
+        High CMI
+           │
+   DSS-II  │  DSS-III
+  Creative │ Polymathic
+           │
+───────────┼───────────── High AMI
+           │
+   DSS-IV  │  DSS-I
+Developing │ Systematic
+           │
+        Low CMI
+```
 
 ### AMI (Analytical Mechanics Intelligence)
-- Symbolic consistency detection
-- Multi-variable manipulation
-- First-principles derivation
-- Boundary condition checking
-- Formal proof construction
-- Algorithmic decomposition
-- Error propagation tracing
-- Symmetry exploitation
-- Logical consistency detection
-- Quantitative estimation
+
+Measures capacity for rigorous, systematic, analytical thinking:
+
+- **Symbolic Consistency** - Detecting errors in formal systems
+- **Multivariable Manipulation** - Tracking complex dependencies
+- **First Principles Derivation** - Reconstructing from axioms
+- **Boundary Condition Checking** - Verifying limiting cases
+- **Formal Proof Construction** - Building rigorous arguments
+- **Algorithmic Decomposition** - Breaking into executable steps
+- **Error Propagation Tracing** - Following compound errors
+- **Symmetry Exploitation** - Using invariants to simplify
+- **Logical Consistency Detection** - Spotting contradictions
+- **Quantitative Estimation** - Fermi-style approximation
 
 ### CMI (Conceptual Morphogenesis Intelligence)
-- Ontology generation
-- Reference frame shifting
-- Paradox tolerance
-- Concept compression
-- Analogical transfer
-- Emergence recognition
-- Abstraction level fluidity
-- Generative metaphor
-- Conceptual boundary dissolution
-- Problem space transformation
 
-## Four DSS Classifications
+Measures capacity for creative conceptual thinking and framework generation:
 
-Based on your AMI and CMI scores, you're classified into one of four cognitive architectures:
+- **Ontology Generation** - Creating new conceptual frameworks
+- **Reference Frame Shifting** - Radical perspective changes
+- **Paradox Tolerance** - Holding contradictions productively
+- **Concept Compression** - Chunking complex ideas into abstractions
+- **Analogical Transfer** - Recognizing structural isomorphism
+- **Emergence Recognition** - Identifying system-level properties
+- **Abstraction Level Fluidity** - Zooming between detail and overview
+- **Generative Metaphor** - Creating revealing metaphors
+- **Conceptual Boundary Dissolution** - Seeing past conventions
+- **Problem Space Transformation** - Reformulating to simplify
 
-| Type | Name | Description |
-|------|------|-------------|
-| **DSS-I** | Systematic Analytical | High AMI, lower CMI. Excels at formal analysis, proofs, and structured problem-solving. |
-| **DSS-II** | Creative Conceptual | High CMI, lower AMI. Excels at paradigm shifts, novel frameworks, and cross-domain insight. |
-| **DSS-III** | Integrated Polymathic | High AMI and CMI. Rare integration enabling rigorous creativity and creative rigor. |
-| **DSS-IV** | Developing Foundational | Moderate scores in both. Flexible foundation with growth potential in either direction. |
+---
 
-## Features
+## DSS Type Classifications
 
-- **20 behavioral marker questions** (~5 minutes to complete)
-- **Random question selection** from a pool of 100 variants for test-retest reliability
-- **Age-adjusted scoring** accounting for cognitive development patterns
-- **Derived IQ (DQ) estimate** with floor/ceiling range
-- **Type probability distribution** showing confidence across all four classifications
-- **Compatibility matrix** for understanding cognitive synergies
-- **Domain fit recommendations** for career and collaboration
-- **Light/Dark theme toggle**
-- **JSON export** of your full profile
+| Type | Name | Profile | Innovation Mode |
+|------|------|---------|-----------------|
+| **DSS-I** | Systematic Analytical | High AMI, Low CMI | Optimization - breakthrough via rigorous refinement |
+| **DSS-II** | Creative Conceptual | Low AMI, High CMI | Disruption - breakthrough via reconceptualization |
+| **DSS-III** | Integrated Polymathic | High AMI, High CMI | Synthesis - breakthrough via integration (~2-5% of population) |
+| **DSS-IV** | Developing Foundational | Moderate both | Iteration - progress via systematic improvement |
 
-## How It Works
+---
 
-1. Answer 20 self-report behavioral questions
+## Theoretical Foundation
+
+DS2 builds on:
+
+- **Cattell-Horn-Carroll (CHC)** intelligence framework
+- **Dual-process theories** of cognition
+- **D·Ω·O Equation**: `±Ω = D · Ω · O`
+  - D (Drag): Precision, localization → AMI domain
+  - Ω (Frame): Context, scope → Integration
+  - O (Object): Fidelity, concept preservation → CMI domain
+
+Full theory documentation: **[docs/DS2-Theory.md](docs/DS2-Theory.md)**
+
+---
+
+## Assessment Tool
+
+The included web assessment measures your DS2 profile through 20 behavioral marker questions.
+
+### Features
+
+- **Random question selection** from a pool of 100 variants
+- **Age-adjusted scoring** accounting for cognitive development
+- **Derived IQ (DQ)** estimate with floor/ceiling range
+- **Type probability distribution** via Bayesian analysis
+- **Compatibility matrix** for cognitive synergies
+- **Domain fit recommendations**
+- **Light/Dark theme**
+- **JSON export** of full profile
+
+### How It Works
+
+1. Answer 20 self-report behavioral questions (~5 min)
 2. Questions probe specific cognitive markers (10 AMI, 10 CMI)
 3. Scores aggregate into dimensional totals (0-10 scale)
-4. Age adjustment applies normative corrections
-5. Classification determined by score thresholds and dominance patterns
-6. Results include detailed interpretation and growth vectors
+4. Classification determined by thresholds and dominance patterns
+5. Results include interpretation and growth vectors
+
+---
+
+## Applications
+
+### Individual
+- Understand cognitive strengths and growth areas
+- Optimize learning strategies to your style
+- Career guidance and domain fit
+
+### Teams
+- Build complementary cognitive pairings
+- Identify gaps in team architecture
+- Improve communication across types
+
+### AI Calibration
+- Match AI response style to user profile
+- Reduce cognitive friction in human-AI interaction
+- Adaptive verbosity and abstraction levels
+
+---
 
 ## Deployment
 
-### GitHub Pages
+### GitHub Pages (Live)
 
-1. Fork this repository
-2. Go to Settings > Pages
-3. Set source to "Deploy from a branch"
-4. Select `main` branch and `/ (root)` folder
-5. Your assessment will be live at `https://yourusername.github.io/ds2-assessment/`
+The assessment is live at: https://garrjo.github.io/dso-cognitive-model/
 
 ### Local Development
 
 ```bash
-# Clone the repo
-git clone https://github.com/yourusername/ds2-assessment.git
-cd ds2-assessment
+git clone https://github.com/garrjo/dso-cognitive-model.git
+cd dso-cognitive-model
 
-# Serve locally (any static server works)
+# Any static server works
 python -m http.server 8080
 # or
 npx serve .
 ```
 
-Open `http://localhost:8080` in your browser.
+---
 
 ## File Structure
 
 ```
-ds2-assessment/
-├── index.html      # Main application
-├── styles.css      # Styling with light/dark theme support
-├── app.js          # Assessment logic and scoring
-├── questions.json  # Question pool (100 questions, 5 variants per marker)
-└── README.md       # This file
+dso-cognitive-model/
+├── index.html          # Assessment application
+├── styles.css          # Light/dark theme styling
+├── app.js              # Assessment logic and scoring
+├── questions.json      # Question pool (100 questions)
+├── docs/
+│   └── DS2-Theory.md   # Full model documentation
+└── README.md
 ```
 
-## Scoring Model
+---
+
+## Scoring Reference
 
 ### Raw Scores
-- Each question yields a score from 0.1 (lowest) to 1.0 (highest)
-- AMI and CMI are averages of their respective marker scores, scaled to 0-10
+- Each question: 0.1 (low) to 1.0 (high)
+- Dimension score: average of markers × 10
+- Type threshold: 5.5
 
 ### Age Adjustment
-- AMI peaks 25-44, with steeper age-related decline
-- CMI peaks 25-49, with shallower decline
-- Adjustments add a "handicap" to account for age-related factors
+- AMI: Peaks 25-44, steeper age decline
+- CMI: Peaks 25-49, shallower decline
 
-### DQ (Derived IQ)
-- Maps the DS2 profile to an estimated IQ range
-- Formula: `IQ = 85 + (score/10) * 90`
-- Provides floor (lower dimension), ceiling (higher dimension), and nominal (average)
+### DQ (Derived IQ) Mapping
+```
+IQ = 85 + (score/10) × 90
+Range: DS2 0 → IQ ~85, DS2 10 → IQ ~175
+```
 
-## Limitations
+---
 
-This is a **self-report behavioral assessment**, not a psychometric instrument. Results should be interpreted as:
+## Status & Validation
 
-- A framework for understanding cognitive preferences
-- A starting point for reflection on strengths and growth areas
-- A conversation tool, not a definitive measurement
+DS2 is designed with psychometric principles:
+- Content validity across 20 behavioral markers
+- 5 question variants per marker for test-retest reliability
+- Bayesian probability calculations for type classification
+- Age-adjusted normative scoring
 
-The assessment has not been formally validated. Treat results as directional rather than precise.
+**Current status:** The model is operationally complete but awaiting formal validation studies. Contributions to validation research are welcome.
+
+---
 
 ## License
 
-MIT License - feel free to use, modify, and share.
+MIT License
 
 ## Contributing
 
-Contributions welcome! Areas of interest:
+Areas of interest:
 - Additional question variants
 - Validation studies
 - Localization/translations
 - Accessibility improvements
-- Mobile responsiveness refinements
-
-## Acknowledgments
-
-DS2 draws inspiration from multiple cognitive frameworks including:
-- Dual-process theories of cognition
-- Multiple intelligences research
-- Cognitive style assessments
-- Systems thinking models
