@@ -1,0 +1,1413 @@
+{
+  "assessment": {
+    "title": "DS2 Cognitive Architecture Assessment",
+    "version": "2.1",
+    "description": "Behavioral marker assessment for Analytical Mechanics Intelligence (AMI) and Conceptual Morphogenesis Intelligence (CMI)",
+    "totalQuestions": 20,
+    "poolSize": 100,
+    "variantsPerMarker": 5,
+    "scoring": "aggregate behavioral markers"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "dimension": "AMI",
+      "marker": "symbolic_consistency",
+      "variant": 1,
+      "text": "Can you detect subtle symbolic inconsistencies in formal derivations?",
+      "context": "For example: spotting when a sign error propagates through equations, or when tensor indices are mismatched.",
+      "options": [
+        { "text": "Yes - I routinely catch subtle symbolic errors others miss", "score": 1.0 },
+        { "text": "Usually - I catch most inconsistencies with careful review", "score": 0.7 },
+        { "text": "Sometimes - I catch obvious errors but miss subtle ones", "score": 0.4 },
+        { "text": "Rarely - I often overlook symbolic inconsistencies", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 101,
+      "dimension": "AMI",
+      "marker": "symbolic_consistency",
+      "variant": 2,
+      "text": "When reviewing mathematical proofs, how often do you notice notation errors before they affect the conclusion?",
+      "context": "Such as inconsistent use of subscripts, forgotten negative signs, or misapplied operators.",
+      "options": [
+        { "text": "Almost always - notation errors jump out at me immediately", "score": 1.0 },
+        { "text": "Frequently - I catch most notation issues during review", "score": 0.7 },
+        { "text": "Occasionally - I catch them if I'm specifically looking", "score": 0.4 },
+        { "text": "Seldom - notation errors often slip past me", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 102,
+      "dimension": "AMI",
+      "marker": "symbolic_consistency",
+      "variant": 3,
+      "text": "In code or formal specifications, do you naturally verify that variable types and units remain consistent throughout?",
+      "context": "Checking that meters aren't added to seconds, or that function return types match their declarations.",
+      "options": [
+        { "text": "Yes - type/unit consistency is something I automatically track", "score": 1.0 },
+        { "text": "Usually - I verify consistency for important variables", "score": 0.7 },
+        { "text": "Sometimes - I check when something seems off", "score": 0.4 },
+        { "text": "Rarely - I rely on compilers or tools to catch these", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 103,
+      "dimension": "AMI",
+      "marker": "symbolic_consistency",
+      "variant": 4,
+      "text": "When following a chain of logical substitutions, can you tell when an intermediate step violates the rules?",
+      "context": "Like substituting before distributing, or applying an operation that isn't valid for the domain.",
+      "options": [
+        { "text": "Yes - invalid substitutions feel wrong even before I identify why", "score": 1.0 },
+        { "text": "Usually - I catch invalid steps if I trace carefully", "score": 0.7 },
+        { "text": "Sometimes - I catch obvious violations only", "score": 0.4 },
+        { "text": "Rarely - I accept intermediate steps if the conclusion seems right", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 104,
+      "dimension": "AMI",
+      "marker": "symbolic_consistency",
+      "variant": 5,
+      "text": "How reliably do you catch when someone uses the same symbol to mean different things in the same argument?",
+      "context": "For example, 'n' meaning sample size in one place and an arbitrary integer elsewhere.",
+      "options": [
+        { "text": "Very reliably - symbol overloading immediately triggers suspicion", "score": 1.0 },
+        { "text": "Fairly reliably - I notice if the context shifts noticeably", "score": 0.7 },
+        { "text": "Somewhat - I catch it if the meanings conflict obviously", "score": 0.4 },
+        { "text": "Not reliably - I tend to assume symbols mean the same thing", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 2,
+      "dimension": "AMI",
+      "marker": "multivariable_manipulation",
+      "variant": 1,
+      "text": "Can you manipulate multi-variable systems simultaneously in your head?",
+      "context": "For example: tracking how changing three parameters affects a system's behavior without writing it down.",
+      "options": [
+        { "text": "Yes - I can hold and manipulate 4+ variables mentally", "score": 1.0 },
+        { "text": "Usually - I can manage 3 variables reliably", "score": 0.7 },
+        { "text": "Sometimes - 2 variables is my comfortable limit", "score": 0.4 },
+        { "text": "Rarely - I need to write things down to track relationships", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 201,
+      "dimension": "AMI",
+      "marker": "multivariable_manipulation",
+      "variant": 2,
+      "text": "When debugging, can you mentally trace how multiple interacting state variables change through execution?",
+      "context": "Tracking how loop counters, accumulated values, and flags evolve together.",
+      "options": [
+        { "text": "Yes - I can simulate multiple state variables mentally through many steps", "score": 1.0 },
+        { "text": "Usually - I can track 3 interacting variables for moderate sequences", "score": 0.7 },
+        { "text": "Sometimes - I need to add print statements for more than 2 variables", "score": 0.4 },
+        { "text": "Rarely - I rely heavily on debuggers or logging", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 202,
+      "dimension": "AMI",
+      "marker": "multivariable_manipulation",
+      "variant": 3,
+      "text": "Can you predict how a system responds to simultaneous changes in multiple inputs?",
+      "context": "Like understanding what happens when you increase price, decrease marketing, and change seasonality at once.",
+      "options": [
+        { "text": "Yes - I can intuit combined effects of 4+ simultaneous changes", "score": 1.0 },
+        { "text": "Usually - I can reason about 3 simultaneous changes accurately", "score": 0.7 },
+        { "text": "Sometimes - I can handle 2 changes but more requires analysis", "score": 0.4 },
+        { "text": "Rarely - I prefer to change one variable at a time", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 203,
+      "dimension": "AMI",
+      "marker": "multivariable_manipulation",
+      "variant": 4,
+      "text": "In strategic planning, can you mentally model how multiple constraints interact?",
+      "context": "Budget, timeline, scope, and resource constraints all affecting each other.",
+      "options": [
+        { "text": "Yes - I naturally see how adjusting one constraint ripples through others", "score": 1.0 },
+        { "text": "Usually - I can track the main interactions with effort", "score": 0.7 },
+        { "text": "Sometimes - I need to map it out to see interactions clearly", "score": 0.4 },
+        { "text": "Rarely - I tend to consider constraints one at a time", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 204,
+      "dimension": "AMI",
+      "marker": "multivariable_manipulation",
+      "variant": 5,
+      "text": "When solving optimization problems, can you mentally track trade-offs across multiple dimensions?",
+      "context": "Understanding how improving one metric affects several others simultaneously.",
+      "options": [
+        { "text": "Yes - I intuitively sense multi-dimensional trade-off surfaces", "score": 1.0 },
+        { "text": "Usually - I can track 3-way trade-offs reliably", "score": 0.7 },
+        { "text": "Sometimes - I focus on the primary trade-off and check others separately", "score": 0.4 },
+        { "text": "Rarely - I optimize dimensions sequentially rather than jointly", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 3,
+      "dimension": "AMI",
+      "marker": "first_principles",
+      "variant": 1,
+      "text": "Do you produce derivations from first principles when prompted?",
+      "context": "Rather than recalling formulas, you reconstruct them from foundational axioms.",
+      "options": [
+        { "text": "Yes - I prefer deriving over memorizing; I can rebuild most formulas", "score": 1.0 },
+        { "text": "Usually - I derive when needed but also memorize common results", "score": 0.7 },
+        { "text": "Sometimes - I can derive simple things but rely on memory for complex ones", "score": 0.4 },
+        { "text": "Rarely - I primarily rely on memorized formulas and procedures", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 301,
+      "dimension": "AMI",
+      "marker": "first_principles",
+      "variant": 2,
+      "text": "When you encounter an unfamiliar problem, do you start by identifying the fundamental principles that govern it?",
+      "context": "Breaking down to basic physics, economics, or logic before building up a solution.",
+      "options": [
+        { "text": "Yes - I always seek the underlying principles first", "score": 1.0 },
+        { "text": "Usually - I look for principles when pattern-matching fails", "score": 0.7 },
+        { "text": "Sometimes - I try analogies first, then principles if stuck", "score": 0.4 },
+        { "text": "Rarely - I look for similar solved problems to adapt", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 302,
+      "dimension": "AMI",
+      "marker": "first_principles",
+      "variant": 3,
+      "text": "Can you explain why standard procedures work by deriving them from basics?",
+      "context": "Not just knowing how to use a technique, but understanding why it's valid.",
+      "options": [
+        { "text": "Yes - I can derive most standard techniques from axioms", "score": 1.0 },
+        { "text": "Usually - I understand the derivation for common techniques", "score": 0.7 },
+        { "text": "Sometimes - I know derivations for some basics only", "score": 0.4 },
+        { "text": "Rarely - I apply techniques without needing to know why they work", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 303,
+      "dimension": "AMI",
+      "marker": "first_principles",
+      "variant": 4,
+      "text": "When given a black-box solution, do you feel compelled to understand its mechanism?",
+      "context": "Not satisfied with 'it works' - wanting to know the underlying logic.",
+      "options": [
+        { "text": "Yes - I need to understand the mechanism to trust the solution", "score": 1.0 },
+        { "text": "Usually - I investigate mechanisms for important solutions", "score": 0.7 },
+        { "text": "Sometimes - I accept black boxes if they're well-tested", "score": 0.4 },
+        { "text": "Rarely - results matter more to me than mechanisms", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 304,
+      "dimension": "AMI",
+      "marker": "first_principles",
+      "variant": 5,
+      "text": "Do you question assumptions that others take for granted?",
+      "context": "Asking 'why is this true?' about things everyone else accepts as given.",
+      "options": [
+        { "text": "Yes - I regularly uncover hidden assumptions others miss", "score": 1.0 },
+        { "text": "Usually - I question assumptions when something seems off", "score": 0.7 },
+        { "text": "Sometimes - I question obvious assumptions only", "score": 0.4 },
+        { "text": "Rarely - I tend to accept standard assumptions", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 4,
+      "dimension": "AMI",
+      "marker": "boundary_checking",
+      "variant": 1,
+      "text": "Do you consistently check units, boundary conditions, or limiting cases?",
+      "context": "For example: verifying that an equation gives sensible results when variables approach 0, infinity, or known limits.",
+      "options": [
+        { "text": "Yes - it's automatic; I always verify dimensional consistency and limits", "score": 1.0 },
+        { "text": "Usually - I check when the problem seems important", "score": 0.7 },
+        { "text": "Sometimes - I check when something seems wrong", "score": 0.4 },
+        { "text": "Rarely - I trust the derivation if the algebra seems correct", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 401,
+      "dimension": "AMI",
+      "marker": "boundary_checking",
+      "variant": 2,
+      "text": "When writing code, do you instinctively consider edge cases like empty inputs, nulls, or overflow?",
+      "context": "Testing what happens at the boundaries of valid input ranges.",
+      "options": [
+        { "text": "Yes - edge cases are the first thing I think about", "score": 1.0 },
+        { "text": "Usually - I check major edge cases systematically", "score": 0.7 },
+        { "text": "Sometimes - I catch edge cases when tests fail", "score": 0.4 },
+        { "text": "Rarely - I focus on the happy path first", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 402,
+      "dimension": "AMI",
+      "marker": "boundary_checking",
+      "variant": 3,
+      "text": "Do you verify that your solutions behave correctly at extreme values?",
+      "context": "Checking what happens as parameters get very large, very small, or approach special values.",
+      "options": [
+        { "text": "Yes - I always test extremes as a sanity check", "score": 1.0 },
+        { "text": "Usually - I check extremes for critical calculations", "score": 0.7 },
+        { "text": "Sometimes - I check if the problem hints at edge issues", "score": 0.4 },
+        { "text": "Rarely - I assume solutions generalize smoothly", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 403,
+      "dimension": "AMI",
+      "marker": "boundary_checking",
+      "variant": 4,
+      "text": "When designing systems, do you explicitly define what happens at operational limits?",
+      "context": "Specifying behavior when capacity is reached, resources are exhausted, or timeouts occur.",
+      "options": [
+        { "text": "Yes - boundary behavior is a core part of my designs", "score": 1.0 },
+        { "text": "Usually - I define limits for key failure modes", "score": 0.7 },
+        { "text": "Sometimes - I address limits when they become apparent", "score": 0.4 },
+        { "text": "Rarely - I design for normal operation primarily", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 404,
+      "dimension": "AMI",
+      "marker": "boundary_checking",
+      "variant": 5,
+      "text": "Do you test whether your conclusions still hold when key assumptions are relaxed?",
+      "context": "Checking robustness by seeing how sensitive results are to assumption violations.",
+      "options": [
+        { "text": "Yes - sensitivity analysis is standard practice for me", "score": 1.0 },
+        { "text": "Usually - I check sensitivity for important decisions", "score": 0.7 },
+        { "text": "Sometimes - I check if I'm unsure about assumptions", "score": 0.4 },
+        { "text": "Rarely - I accept conclusions if assumptions seem reasonable", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 5,
+      "dimension": "AMI",
+      "marker": "formal_proof_construction",
+      "variant": 1,
+      "text": "Can you construct formal proofs with rigorous logical structure?",
+      "context": "Building arguments where each step follows necessarily from previous steps with explicit justification.",
+      "options": [
+        { "text": "Yes - I can construct and verify multi-step formal proofs", "score": 1.0 },
+        { "text": "Usually - I can build proofs but may miss some rigor", "score": 0.7 },
+        { "text": "Sometimes - I can follow proofs but struggle to construct them", "score": 0.4 },
+        { "text": "Rarely - formal proof construction is not my strength", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 501,
+      "dimension": "AMI",
+      "marker": "formal_proof_construction",
+      "variant": 2,
+      "text": "Can you structure an argument so that each claim is explicitly justified?",
+      "context": "Making the logical dependencies between statements clear and traceable.",
+      "options": [
+        { "text": "Yes - I naturally build arguments with explicit justification chains", "score": 1.0 },
+        { "text": "Usually - I can structure arguments formally when needed", "score": 0.7 },
+        { "text": "Sometimes - I make arguments but may skip justification steps", "score": 0.4 },
+        { "text": "Rarely - I argue more intuitively than formally", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 502,
+      "dimension": "AMI",
+      "marker": "formal_proof_construction",
+      "variant": 3,
+      "text": "When you need to prove something, can you identify the appropriate proof technique?",
+      "context": "Choosing between direct proof, contradiction, induction, construction, etc.",
+      "options": [
+        { "text": "Yes - I select proof strategies based on problem structure", "score": 1.0 },
+        { "text": "Usually - I know several techniques and can often match them", "score": 0.7 },
+        { "text": "Sometimes - I try techniques until one works", "score": 0.4 },
+        { "text": "Rarely - I'm not fluent in formal proof techniques", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 503,
+      "dimension": "AMI",
+      "marker": "formal_proof_construction",
+      "variant": 4,
+      "text": "Can you spot gaps in someone else's proof or argument?",
+      "context": "Identifying where logical steps are missing, unjustified, or invalid.",
+      "options": [
+        { "text": "Yes - I catch logical gaps that others accept", "score": 1.0 },
+        { "text": "Usually - I find gaps with careful analysis", "score": 0.7 },
+        { "text": "Sometimes - I spot obvious gaps only", "score": 0.4 },
+        { "text": "Rarely - I tend to trust structured-looking arguments", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 504,
+      "dimension": "AMI",
+      "marker": "formal_proof_construction",
+      "variant": 5,
+      "text": "Do you distinguish between 'plausible' and 'proven' in your reasoning?",
+      "context": "Knowing when you have intuition versus certainty, evidence versus proof.",
+      "options": [
+        { "text": "Yes - I'm precise about my confidence levels and their basis", "score": 1.0 },
+        { "text": "Usually - I distinguish proven from likely for important claims", "score": 0.7 },
+        { "text": "Sometimes - I blur the distinction when evidence is strong", "score": 0.4 },
+        { "text": "Rarely - I treat high confidence as equivalent to certainty", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 6,
+      "dimension": "AMI",
+      "marker": "algorithmic_decomposition",
+      "variant": 1,
+      "text": "Can you decompose complex procedures into precise algorithmic steps?",
+      "context": "Breaking down a process so that each step is unambiguous and mechanically executable.",
+      "options": [
+        { "text": "Yes - I naturally think in algorithms and can specify exact procedures", "score": 1.0 },
+        { "text": "Usually - I can create clear procedures with some effort", "score": 0.7 },
+        { "text": "Sometimes - my procedures work but may have ambiguous steps", "score": 0.4 },
+        { "text": "Rarely - I think more holistically than algorithmically", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 601,
+      "dimension": "AMI",
+      "marker": "algorithmic_decomposition",
+      "variant": 2,
+      "text": "Can you write instructions that someone could follow mechanically without interpretation?",
+      "context": "Creating procedures where no judgment calls are needed - every decision is specified.",
+      "options": [
+        { "text": "Yes - I can write fully unambiguous executable specifications", "score": 1.0 },
+        { "text": "Usually - my instructions need minimal interpretation", "score": 0.7 },
+        { "text": "Sometimes - my instructions require some contextual judgment", "score": 0.4 },
+        { "text": "Rarely - my instructions assume shared understanding", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 602,
+      "dimension": "AMI",
+      "marker": "algorithmic_decomposition",
+      "variant": 3,
+      "text": "When facing a complex task, do you naturally break it into ordered sub-tasks?",
+      "context": "Creating a clear sequence where later steps depend on earlier results.",
+      "options": [
+        { "text": "Yes - I immediately see the task as a dependency graph", "score": 1.0 },
+        { "text": "Usually - I decompose tasks when they're non-trivial", "score": 0.7 },
+        { "text": "Sometimes - I decompose only when I get stuck", "score": 0.4 },
+        { "text": "Rarely - I prefer to tackle things holistically", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 603,
+      "dimension": "AMI",
+      "marker": "algorithmic_decomposition",
+      "variant": 4,
+      "text": "Can you identify which parts of a process can run in parallel versus which must be sequential?",
+      "context": "Understanding dependencies well enough to know what can happen simultaneously.",
+      "options": [
+        { "text": "Yes - I naturally see parallelization opportunities", "score": 1.0 },
+        { "text": "Usually - I can identify obvious parallelism", "score": 0.7 },
+        { "text": "Sometimes - I find parallelism with explicit analysis", "score": 0.4 },
+        { "text": "Rarely - I default to sequential thinking", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 604,
+      "dimension": "AMI",
+      "marker": "algorithmic_decomposition",
+      "variant": 5,
+      "text": "Do you specify termination conditions explicitly when defining iterative processes?",
+      "context": "Clearly stating when a loop, search, or refinement should stop.",
+      "options": [
+        { "text": "Yes - I always define explicit stopping criteria", "score": 1.0 },
+        { "text": "Usually - I specify termination for important iterations", "score": 0.7 },
+        { "text": "Sometimes - I rely on intuitive 'good enough' stopping", "score": 0.4 },
+        { "text": "Rarely - I stop processes when results seem satisfactory", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 7,
+      "dimension": "AMI",
+      "marker": "error_propagation",
+      "variant": 1,
+      "text": "Can you trace how errors propagate through a system of calculations?",
+      "context": "Understanding how uncertainty or mistakes in inputs affect outputs through chains of operations.",
+      "options": [
+        { "text": "Yes - I can mentally track error propagation through complex chains", "score": 1.0 },
+        { "text": "Usually - I can trace errors through moderate complexity", "score": 0.7 },
+        { "text": "Sometimes - I can trace simple error chains", "score": 0.4 },
+        { "text": "Rarely - I find error propagation analysis difficult", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 701,
+      "dimension": "AMI",
+      "marker": "error_propagation",
+      "variant": 2,
+      "text": "When you see an incorrect output, can you trace backward to identify which input caused it?",
+      "context": "Root cause analysis through chains of transformations.",
+      "options": [
+        { "text": "Yes - I can efficiently trace errors back through complex systems", "score": 1.0 },
+        { "text": "Usually - I can trace back through moderate chains", "score": 0.7 },
+        { "text": "Sometimes - I trace back through obvious paths only", "score": 0.4 },
+        { "text": "Rarely - I find root cause analysis challenging", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 702,
+      "dimension": "AMI",
+      "marker": "error_propagation",
+      "variant": 3,
+      "text": "Can you predict how uncertainty in measurements will affect your final conclusions?",
+      "context": "Understanding how input precision limits output confidence.",
+      "options": [
+        { "text": "Yes - I track uncertainty propagation as a matter of course", "score": 1.0 },
+        { "text": "Usually - I consider uncertainty for critical calculations", "score": 0.7 },
+        { "text": "Sometimes - I think about uncertainty when explicitly required", "score": 0.4 },
+        { "text": "Rarely - I work with point estimates mainly", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 703,
+      "dimension": "AMI",
+      "marker": "error_propagation",
+      "variant": 4,
+      "text": "Do you understand how rounding or approximation errors accumulate?",
+      "context": "Knowing when small errors compound into significant ones through repeated operations.",
+      "options": [
+        { "text": "Yes - I'm always aware of error accumulation risks", "score": 1.0 },
+        { "text": "Usually - I check for accumulation in iterative processes", "score": 0.7 },
+        { "text": "Sometimes - I notice when accumulation causes visible problems", "score": 0.4 },
+        { "text": "Rarely - I assume small errors stay small", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 704,
+      "dimension": "AMI",
+      "marker": "error_propagation",
+      "variant": 5,
+      "text": "Can you identify which inputs a result is most sensitive to?",
+      "context": "Knowing where small changes in inputs cause large changes in outputs.",
+      "options": [
+        { "text": "Yes - I intuitively sense sensitivity structure", "score": 1.0 },
+        { "text": "Usually - I can identify high-sensitivity inputs with analysis", "score": 0.7 },
+        { "text": "Sometimes - I find dominant sensitivities only", "score": 0.4 },
+        { "text": "Rarely - I treat all inputs as equally impactful", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 8,
+      "dimension": "AMI",
+      "marker": "symmetry_exploitation",
+      "variant": 1,
+      "text": "Do you exploit symmetries to simplify problems?",
+      "context": "Recognizing when a problem has symmetry that reduces its effective dimensionality or complexity.",
+      "options": [
+        { "text": "Yes - I actively seek and exploit symmetries as a primary strategy", "score": 1.0 },
+        { "text": "Usually - I recognize obvious symmetries", "score": 0.7 },
+        { "text": "Sometimes - I notice symmetries when pointed out", "score": 0.4 },
+        { "text": "Rarely - I tend to solve problems without considering symmetry", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 801,
+      "dimension": "AMI",
+      "marker": "symmetry_exploitation",
+      "variant": 2,
+      "text": "When facing a complex problem, do you look for invariants that must be preserved?",
+      "context": "Quantities or relationships that don't change under the operations you're considering.",
+      "options": [
+        { "text": "Yes - finding invariants is one of my first moves", "score": 1.0 },
+        { "text": "Usually - I look for invariants when problems seem hard", "score": 0.7 },
+        { "text": "Sometimes - I use invariants when they're suggested", "score": 0.4 },
+        { "text": "Rarely - I don't typically think in terms of invariants", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 802,
+      "dimension": "AMI",
+      "marker": "symmetry_exploitation",
+      "variant": 3,
+      "text": "Do you recognize when a problem has rotational, translational, or other structural symmetry?",
+      "context": "Seeing that the problem looks the same from different vantage points or under transformations.",
+      "options": [
+        { "text": "Yes - I immediately perceive structural symmetries", "score": 1.0 },
+        { "text": "Usually - I notice symmetries when I'm looking for simplifications", "score": 0.7 },
+        { "text": "Sometimes - I see obvious geometric symmetries", "score": 0.4 },
+        { "text": "Rarely - I don't naturally perceive abstract symmetries", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 803,
+      "dimension": "AMI",
+      "marker": "symmetry_exploitation",
+      "variant": 4,
+      "text": "Can you reduce a problem's complexity by choosing the right coordinate system or reference frame?",
+      "context": "Selecting representations where symmetries become apparent and exploitable.",
+      "options": [
+        { "text": "Yes - choosing good coordinates is a key part of my approach", "score": 1.0 },
+        { "text": "Usually - I consider alternative representations for hard problems", "score": 0.7 },
+        { "text": "Sometimes - I try different coordinates when stuck", "score": 0.4 },
+        { "text": "Rarely - I work in whatever coordinates are given", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 804,
+      "dimension": "AMI",
+      "marker": "symmetry_exploitation",
+      "variant": 5,
+      "text": "Do you use symmetry arguments to rule out possibilities without calculating?",
+      "context": "Knowing that certain outcomes are impossible because they would violate symmetry.",
+      "options": [
+        { "text": "Yes - symmetry arguments often let me skip calculations", "score": 1.0 },
+        { "text": "Usually - I use symmetry to constrain solutions", "score": 0.7 },
+        { "text": "Sometimes - I verify symmetry constraints after calculating", "score": 0.4 },
+        { "text": "Rarely - I calculate rather than argue from symmetry", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 9,
+      "dimension": "AMI",
+      "marker": "logical_consistency",
+      "variant": 1,
+      "text": "Can you detect logical contradictions in complex arguments?",
+      "context": "Identifying when conclusions don't follow from premises, or when hidden assumptions create inconsistency.",
+      "options": [
+        { "text": "Yes - I quickly spot logical flaws even in sophisticated arguments", "score": 1.0 },
+        { "text": "Usually - I catch contradictions with careful analysis", "score": 0.7 },
+        { "text": "Sometimes - I catch obvious contradictions", "score": 0.4 },
+        { "text": "Rarely - logical analysis is not my primary mode", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 901,
+      "dimension": "AMI",
+      "marker": "logical_consistency",
+      "variant": 2,
+      "text": "When someone presents a chain of reasoning, do you verify each inference independently?",
+      "context": "Checking that each step actually follows, not just that the conclusion sounds reasonable.",
+      "options": [
+        { "text": "Yes - I validate each logical step individually", "score": 1.0 },
+        { "text": "Usually - I check key inferences in important arguments", "score": 0.7 },
+        { "text": "Sometimes - I check if the overall conclusion seems off", "score": 0.4 },
+        { "text": "Rarely - I evaluate arguments holistically", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 902,
+      "dimension": "AMI",
+      "marker": "logical_consistency",
+      "variant": 3,
+      "text": "Can you identify when an argument assumes what it's trying to prove?",
+      "context": "Spotting circular reasoning or question-begging in disguised forms.",
+      "options": [
+        { "text": "Yes - I catch circular reasoning even when it's well-hidden", "score": 1.0 },
+        { "text": "Usually - I notice circularity when I trace assumptions", "score": 0.7 },
+        { "text": "Sometimes - I catch obvious circularity", "score": 0.4 },
+        { "text": "Rarely - circular arguments often seem valid to me initially", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 903,
+      "dimension": "AMI",
+      "marker": "logical_consistency",
+      "variant": 4,
+      "text": "Do you notice when the same term is used with different meanings within an argument?",
+      "context": "Equivocation - where a word shifts meaning to make an invalid inference seem valid.",
+      "options": [
+        { "text": "Yes - I'm sensitive to semantic shifts in arguments", "score": 1.0 },
+        { "text": "Usually - I catch equivocation in careful reading", "score": 0.7 },
+        { "text": "Sometimes - I notice when meanings are obviously different", "score": 0.4 },
+        { "text": "Rarely - I tend to assume consistent meaning", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 904,
+      "dimension": "AMI",
+      "marker": "logical_consistency",
+      "variant": 5,
+      "text": "Can you tell when a conclusion is stronger than the evidence supports?",
+      "context": "Recognizing overgeneralization, unwarranted certainty, or unjustified scope.",
+      "options": [
+        { "text": "Yes - I'm attuned to the gap between evidence and claims", "score": 1.0 },
+        { "text": "Usually - I notice when conclusions are too strong", "score": 0.7 },
+        { "text": "Sometimes - I question very bold claims", "score": 0.4 },
+        { "text": "Rarely - strong conclusions from evidence seem natural", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 10,
+      "dimension": "AMI",
+      "marker": "quantitative_estimation",
+      "variant": 1,
+      "text": "Can you make accurate order-of-magnitude estimates for unfamiliar quantities?",
+      "context": "Fermi estimation - quickly approximating values through chains of reasoning.",
+      "options": [
+        { "text": "Yes - I can reliably estimate within an order of magnitude", "score": 1.0 },
+        { "text": "Usually - my estimates are often reasonably close", "score": 0.7 },
+        { "text": "Sometimes - I can estimate familiar domains only", "score": 0.4 },
+        { "text": "Rarely - quantitative estimation is difficult for me", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 1001,
+      "dimension": "AMI",
+      "marker": "quantitative_estimation",
+      "variant": 2,
+      "text": "Can you quickly sanity-check whether a number 'makes sense'?",
+      "context": "Knowing that 'million' is wrong when it should be 'billion', or recognizing implausible rates.",
+      "options": [
+        { "text": "Yes - wrong magnitudes immediately trigger suspicion", "score": 1.0 },
+        { "text": "Usually - I catch clearly wrong magnitudes", "score": 0.7 },
+        { "text": "Sometimes - I catch errors in domains I know well", "score": 0.4 },
+        { "text": "Rarely - I accept numbers without magnitude checking", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 1002,
+      "dimension": "AMI",
+      "marker": "quantitative_estimation",
+      "variant": 3,
+      "text": "Can you decompose an unknown quantity into estimable components?",
+      "context": "Breaking 'how many X in Y' into a chain of smaller estimates you can make.",
+      "options": [
+        { "text": "Yes - I naturally decompose unknowns into estimable pieces", "score": 1.0 },
+        { "text": "Usually - I can find decompositions with some thought", "score": 0.7 },
+        { "text": "Sometimes - I decompose simple quantities only", "score": 0.4 },
+        { "text": "Rarely - I don't know how to approach unknown quantities", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 1003,
+      "dimension": "AMI",
+      "marker": "quantitative_estimation",
+      "variant": 4,
+      "text": "Do you have reliable intuitions for common quantities like populations, distances, or rates?",
+      "context": "A mental library of reference values you can anchor estimates to.",
+      "options": [
+        { "text": "Yes - I have a rich set of reference quantities across domains", "score": 1.0 },
+        { "text": "Usually - I know key reference values in my areas", "score": 0.7 },
+        { "text": "Sometimes - I know a few common reference points", "score": 0.4 },
+        { "text": "Rarely - I don't maintain mental reference values", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 1004,
+      "dimension": "AMI",
+      "marker": "quantitative_estimation",
+      "variant": 5,
+      "text": "Can you estimate how long a task will take before starting it?",
+      "context": "Time estimation based on decomposition and experience with similar work.",
+      "options": [
+        { "text": "Yes - my time estimates are usually accurate", "score": 1.0 },
+        { "text": "Usually - I estimate time reasonably for familiar tasks", "score": 0.7 },
+        { "text": "Sometimes - my estimates are often off by 2x or more", "score": 0.4 },
+        { "text": "Rarely - time estimation is very difficult for me", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 11,
+      "dimension": "CMI",
+      "marker": "ontology_generation",
+      "variant": 1,
+      "text": "Can you generate new ontologies for a problem from scratch?",
+      "context": "Creating entirely new categories, distinctions, or conceptual frameworks to understand a domain.",
+      "options": [
+        { "text": "Yes - I regularly create novel conceptual frameworks", "score": 1.0 },
+        { "text": "Usually - I can create new frameworks when existing ones fail", "score": 0.7 },
+        { "text": "Sometimes - I adapt existing frameworks more than create new ones", "score": 0.4 },
+        { "text": "Rarely - I prefer working within established frameworks", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 1101,
+      "dimension": "CMI",
+      "marker": "ontology_generation",
+      "variant": 2,
+      "text": "Do you invent new categories when existing ones don't carve reality well?",
+      "context": "Recognizing that standard classifications miss important distinctions.",
+      "options": [
+        { "text": "Yes - I routinely create better categories than what exists", "score": 1.0 },
+        { "text": "Usually - I modify categories when they clearly fail", "score": 0.7 },
+        { "text": "Sometimes - I work with given categories mostly", "score": 0.4 },
+        { "text": "Rarely - I accept standard categorizations", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 1102,
+      "dimension": "CMI",
+      "marker": "ontology_generation",
+      "variant": 3,
+      "text": "Can you define new concepts that didn't exist before but should?",
+      "context": "Coining terms for phenomena everyone experiences but no one has named.",
+      "options": [
+        { "text": "Yes - I often identify and name previously unnamed things", "score": 1.0 },
+        { "text": "Usually - I can articulate new concepts when needed", "score": 0.7 },
+        { "text": "Sometimes - I use existing terms even when they don't quite fit", "score": 0.4 },
+        { "text": "Rarely - I work within existing vocabulary", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 1103,
+      "dimension": "CMI",
+      "marker": "ontology_generation",
+      "variant": 4,
+      "text": "When you encounter a messy problem, do you restructure how it's conceptualized?",
+      "context": "Redefining what the entities and relationships are, not just how to handle given ones.",
+      "options": [
+        { "text": "Yes - reconceptualization is often my first move", "score": 1.0 },
+        { "text": "Usually - I restructure when the given framing seems wrong", "score": 0.7 },
+        { "text": "Sometimes - I try to work within given structures first", "score": 0.4 },
+        { "text": "Rarely - I accept problem structures as given", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 1104,
+      "dimension": "CMI",
+      "marker": "ontology_generation",
+      "variant": 5,
+      "text": "Do you see multiple valid ways to slice the same domain into categories?",
+      "context": "Understanding that taxonomies are choices, not discoveries.",
+      "options": [
+        { "text": "Yes - I see categorization as a design choice with trade-offs", "score": 1.0 },
+        { "text": "Usually - I recognize that different categorizations serve different purposes", "score": 0.7 },
+        { "text": "Sometimes - I see alternatives when prompted", "score": 0.4 },
+        { "text": "Rarely - I see categories as natural or given", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 12,
+      "dimension": "CMI",
+      "marker": "reference_frame_shift",
+      "variant": 1,
+      "text": "Can you reframe a problem in a completely different reference frame?",
+      "context": "Seeing a problem from an entirely different perspective that transforms what the problem even is.",
+      "options": [
+        { "text": "Yes - I naturally see problems from multiple, radically different frames", "score": 1.0 },
+        { "text": "Usually - I can shift frames with deliberate effort", "score": 0.7 },
+        { "text": "Sometimes - I can shift to related frames but not radically different ones", "score": 0.4 },
+        { "text": "Rarely - I tend to stay within my initial framing", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 1201,
+      "dimension": "CMI",
+      "marker": "reference_frame_shift",
+      "variant": 2,
+      "text": "Can you see a situation from a stakeholder perspective very different from your own?",
+      "context": "Understanding how a problem looks entirely different to someone with different goals or values.",
+      "options": [
+        { "text": "Yes - I can genuinely adopt alien perspectives, not just simulate them", "score": 1.0 },
+        { "text": "Usually - I can see through others' eyes with effort", "score": 0.7 },
+        { "text": "Sometimes - I can imagine obvious differences in perspective", "score": 0.4 },
+        { "text": "Rarely - I tend to project my own perspective onto others", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 1202,
+      "dimension": "CMI",
+      "marker": "reference_frame_shift",
+      "variant": 3,
+      "text": "Do you spontaneously see how a problem would look from a different discipline's viewpoint?",
+      "context": "A physicist seeing economics problems, or an artist seeing engineering problems.",
+      "options": [
+        { "text": "Yes - I automatically translate problems into multiple disciplinary frames", "score": 1.0 },
+        { "text": "Usually - I can reframe into disciplines I know something about", "score": 0.7 },
+        { "text": "Sometimes - I see cross-disciplinary connections when they're obvious", "score": 0.4 },
+        { "text": "Rarely - I stay within my home discipline's framing", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 1203,
+      "dimension": "CMI",
+      "marker": "reference_frame_shift",
+      "variant": 4,
+      "text": "Can you view a familiar situation as if encountering it for the first time?",
+      "context": "Defamiliarization - stripping away assumptions to see things fresh.",
+      "options": [
+        { "text": "Yes - I can deliberately induce beginner's mind", "score": 1.0 },
+        { "text": "Usually - I can question familiar framings when prompted", "score": 0.7 },
+        { "text": "Sometimes - I notice when familiarity might blind me", "score": 0.4 },
+        { "text": "Rarely - I rely on established understanding", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 1204,
+      "dimension": "CMI",
+      "marker": "reference_frame_shift",
+      "variant": 5,
+      "text": "When an approach isn't working, do you question whether you're solving the right problem?",
+      "context": "Stepping back to reconsider the problem definition, not just the solution method.",
+      "options": [
+        { "text": "Yes - I regularly question the problem itself, not just my solutions", "score": 1.0 },
+        { "text": "Usually - I reconsider problem framing when stuck", "score": 0.7 },
+        { "text": "Sometimes - I try many solutions before questioning the problem", "score": 0.4 },
+        { "text": "Rarely - I assume the problem is given correctly", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 13,
+      "dimension": "CMI",
+      "marker": "paradox_tolerance",
+      "variant": 1,
+      "text": "Do you tolerate paradox and produce new insights from contradictions?",
+      "context": "Holding contradictory ideas simultaneously and using the tension to generate understanding.",
+      "options": [
+        { "text": "Yes - paradoxes are generative; I find them productive", "score": 1.0 },
+        { "text": "Usually - I can sit with contradiction long enough to learn from it", "score": 0.7 },
+        { "text": "Sometimes - I tolerate paradox but seek resolution quickly", "score": 0.4 },
+        { "text": "Rarely - contradictions feel uncomfortable; I resolve them immediately", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 1301,
+      "dimension": "CMI",
+      "marker": "paradox_tolerance",
+      "variant": 2,
+      "text": "Can you hold two contradictory beliefs simultaneously to explore their tension?",
+      "context": "Not resolving contradiction prematurely, but using it as a thinking tool.",
+      "options": [
+        { "text": "Yes - I can maintain productive cognitive dissonance indefinitely", "score": 1.0 },
+        { "text": "Usually - I can hold contradictions for useful periods", "score": 0.7 },
+        { "text": "Sometimes - I can tolerate contradiction briefly", "score": 0.4 },
+        { "text": "Rarely - contradictions create pressure I need to resolve", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 1302,
+      "dimension": "CMI",
+      "marker": "paradox_tolerance",
+      "variant": 3,
+      "text": "Do you find apparent contradictions interesting rather than disturbing?",
+      "context": "Seeing paradox as a signal that something interesting is happening, not as a problem to fix.",
+      "options": [
+        { "text": "Yes - contradictions excite me; they often point to deeper truth", "score": 1.0 },
+        { "text": "Usually - I find some contradictions intellectually stimulating", "score": 0.7 },
+        { "text": "Sometimes - I can appreciate contradiction in certain contexts", "score": 0.4 },
+        { "text": "Rarely - contradictions mainly signal errors to correct", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 1303,
+      "dimension": "CMI",
+      "marker": "paradox_tolerance",
+      "variant": 4,
+      "text": "Can you entertain an idea seriously even if you believe it's false?",
+      "context": "Steelmanning - understanding the strongest version of views you disagree with.",
+      "options": [
+        { "text": "Yes - I can fully inhabit perspectives I ultimately reject", "score": 1.0 },
+        { "text": "Usually - I can explore opposing views seriously", "score": 0.7 },
+        { "text": "Sometimes - I try to understand views I disagree with", "score": 0.4 },
+        { "text": "Rarely - I focus on views I think are correct", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 1304,
+      "dimension": "CMI",
+      "marker": "paradox_tolerance",
+      "variant": 5,
+      "text": "When you discover your beliefs contradict each other, is your first impulse curiosity or discomfort?",
+      "context": "Your emotional response to finding inconsistency in your own thinking.",
+      "options": [
+        { "text": "Curiosity - internal contradictions are opportunities to learn", "score": 1.0 },
+        { "text": "Mostly curiosity - I investigate after initial surprise", "score": 0.7 },
+        { "text": "Mixed - some discomfort but I can work through it", "score": 0.4 },
+        { "text": "Discomfort - I need to resolve contradictions quickly", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 14,
+      "dimension": "CMI",
+      "marker": "concept_compression",
+      "variant": 1,
+      "text": "Can you compress a multi-domain concept into a single, manipulable mental object?",
+      "context": "Taking complex ideas from different fields and chunking them into unified conceptual handles.",
+      "options": [
+        { "text": "Yes - I create unified abstractions that span domains", "score": 1.0 },
+        { "text": "Usually - I can compress within domains", "score": 0.7 },
+        { "text": "Sometimes - I keep domain concepts separate", "score": 0.4 },
+        { "text": "Rarely - I work with ideas in their original form", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 1401,
+      "dimension": "CMI",
+      "marker": "concept_compression",
+      "variant": 2,
+      "text": "Can you summarize a complex system in a single sentence that captures its essence?",
+      "context": "Distilling to the core insight without losing what matters.",
+      "options": [
+        { "text": "Yes - I can compress complex systems to their essential logic", "score": 1.0 },
+        { "text": "Usually - I can capture main ideas concisely", "score": 0.7 },
+        { "text": "Sometimes - my summaries require several sentences", "score": 0.4 },
+        { "text": "Rarely - I need to explain details to convey understanding", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 1402,
+      "dimension": "CMI",
+      "marker": "concept_compression",
+      "variant": 3,
+      "text": "Do you create mental 'handles' that let you manipulate complex ideas as single units?",
+      "context": "Chunking - packaging complexity so you can think with it rather than about it.",
+      "options": [
+        { "text": "Yes - I create powerful conceptual handles naturally", "score": 1.0 },
+        { "text": "Usually - I chunk familiar complexities", "score": 0.7 },
+        { "text": "Sometimes - I use existing terms as handles", "score": 0.4 },
+        { "text": "Rarely - I think through components rather than chunks", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 1403,
+      "dimension": "CMI",
+      "marker": "concept_compression",
+      "variant": 4,
+      "text": "Can you explain a technical concept to a novice in a way that gives them real understanding?",
+      "context": "Not dumbing down but finding the compressed representation that conveys the core.",
+      "options": [
+        { "text": "Yes - I can transmit understanding without technical details", "score": 1.0 },
+        { "text": "Usually - I can simplify most concepts effectively", "score": 0.7 },
+        { "text": "Sometimes - I simplify but lose important nuance", "score": 0.4 },
+        { "text": "Rarely - technical concepts require technical explanations", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 1404,
+      "dimension": "CMI",
+      "marker": "concept_compression",
+      "variant": 5,
+      "text": "When you learn something new, do you quickly integrate it with what you already know?",
+      "context": "New information immediately connects and compresses with existing knowledge.",
+      "options": [
+        { "text": "Yes - new learning immediately restructures my existing understanding", "score": 1.0 },
+        { "text": "Usually - I connect new ideas to existing frameworks", "score": 0.7 },
+        { "text": "Sometimes - I store new knowledge somewhat separately at first", "score": 0.4 },
+        { "text": "Rarely - I keep new information in its own compartment", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 15,
+      "dimension": "CMI",
+      "marker": "analogical_transfer",
+      "variant": 1,
+      "text": "Can you transfer structural insights between seemingly unrelated domains?",
+      "context": "Seeing that the deep structure of one problem is isomorphic to another from a different field.",
+      "options": [
+        { "text": "Yes - I constantly see structural parallels across domains", "score": 1.0 },
+        { "text": "Usually - I make cross-domain connections when prompted", "score": 0.7 },
+        { "text": "Sometimes - I see connections between related domains", "score": 0.4 },
+        { "text": "Rarely - I keep domain knowledge compartmentalized", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 1501,
+      "dimension": "CMI",
+      "marker": "analogical_transfer",
+      "variant": 2,
+      "text": "Do solutions from one field spontaneously suggest themselves when you're working in another?",
+      "context": "Cross-pollination happening automatically without deliberate search.",
+      "options": [
+        { "text": "Yes - ideas from other domains constantly intrude productively", "score": 1.0 },
+        { "text": "Usually - I often see relevant parallels from other areas", "score": 0.7 },
+        { "text": "Sometimes - I notice connections between obviously related fields", "score": 0.4 },
+        { "text": "Rarely - I focus on domain-native solutions", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 1502,
+      "dimension": "CMI",
+      "marker": "analogical_transfer",
+      "variant": 3,
+      "text": "Can you recognize when two problems have the same underlying structure despite surface differences?",
+      "context": "Seeing isomorphism - that different-looking problems are mathematically or logically identical.",
+      "options": [
+        { "text": "Yes - I see through surface features to structural identity", "score": 1.0 },
+        { "text": "Usually - I recognize shared structure in similar domains", "score": 0.7 },
+        { "text": "Sometimes - I notice obvious structural similarities", "score": 0.4 },
+        { "text": "Rarely - surface features dominate my perception", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 1503,
+      "dimension": "CMI",
+      "marker": "analogical_transfer",
+      "variant": 4,
+      "text": "Do you use metaphors from one domain to generate insights in another?",
+      "context": "Not just communicating with metaphor but thinking with it - letting it guide discovery.",
+      "options": [
+        { "text": "Yes - metaphorical thinking drives many of my insights", "score": 1.0 },
+        { "text": "Usually - metaphors help me understand new domains", "score": 0.7 },
+        { "text": "Sometimes - I use metaphors for communication mainly", "score": 0.4 },
+        { "text": "Rarely - I prefer literal domain-specific thinking", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 1504,
+      "dimension": "CMI",
+      "marker": "analogical_transfer",
+      "variant": 5,
+      "text": "When you master something in one area, does it improve your ability in seemingly unrelated areas?",
+      "context": "Transfer learning - skills and insights generalizing beyond their original context.",
+      "options": [
+        { "text": "Yes - deep learning transfers broadly for me", "score": 1.0 },
+        { "text": "Usually - I see transfer to related areas", "score": 0.7 },
+        { "text": "Sometimes - I notice limited transfer effects", "score": 0.4 },
+        { "text": "Rarely - skills stay specific to where I learned them", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 16,
+      "dimension": "CMI",
+      "marker": "emergence_recognition",
+      "variant": 1,
+      "text": "Can you recognize emergent properties that aren't present in components?",
+      "context": "Seeing how interactions produce qualitatively new phenomena not predictable from parts alone.",
+      "options": [
+        { "text": "Yes - I'm attuned to emergent phenomena and think in terms of emergence", "score": 1.0 },
+        { "text": "Usually - I recognize emergence when analyzing systems", "score": 0.7 },
+        { "text": "Sometimes - I notice emergence when it's pointed out", "score": 0.4 },
+        { "text": "Rarely - I tend to think reductively in terms of components", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 1601,
+      "dimension": "CMI",
+      "marker": "emergence_recognition",
+      "variant": 2,
+      "text": "Do you see systems as having properties beyond the sum of their parts?",
+      "context": "Understanding that interaction effects create new realities.",
+      "options": [
+        { "text": "Yes - whole-system properties are often what I focus on", "score": 1.0 },
+        { "text": "Usually - I consider systemic properties for complex systems", "score": 0.7 },
+        { "text": "Sometimes - I think about system properties when prompted", "score": 0.4 },
+        { "text": "Rarely - I understand systems through their components", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 1602,
+      "dimension": "CMI",
+      "marker": "emergence_recognition",
+      "variant": 3,
+      "text": "Can you predict when scaling will produce qualitative rather than just quantitative changes?",
+      "context": "Knowing when 'more' becomes 'different' - phase transitions and threshold effects.",
+      "options": [
+        { "text": "Yes - I anticipate phase transitions and emergence at scale", "score": 1.0 },
+        { "text": "Usually - I expect nonlinear effects in complex scaling", "score": 0.7 },
+        { "text": "Sometimes - I notice scaling surprises after they happen", "score": 0.4 },
+        { "text": "Rarely - I expect smooth scaling unless told otherwise", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 1603,
+      "dimension": "CMI",
+      "marker": "emergence_recognition",
+      "variant": 4,
+      "text": "Do you notice when collective behavior can't be explained by individual behavior?",
+      "context": "Markets, crowds, ecosystems - where group dynamics transcend individual actions.",
+      "options": [
+        { "text": "Yes - I naturally think at both individual and collective levels", "score": 1.0 },
+        { "text": "Usually - I consider collective dynamics in social systems", "score": 0.7 },
+        { "text": "Sometimes - I aggregate individual behavior for predictions", "score": 0.4 },
+        { "text": "Rarely - I explain collectives through typical individuals", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 1604,
+      "dimension": "CMI",
+      "marker": "emergence_recognition",
+      "variant": 5,
+      "text": "Can you identify feedback loops that create self-reinforcing or self-limiting dynamics?",
+      "context": "Seeing how circular causation produces stable patterns or runaway effects.",
+      "options": [
+        { "text": "Yes - I naturally see feedback structures and their implications", "score": 1.0 },
+        { "text": "Usually - I identify feedback loops in systems I analyze", "score": 0.7 },
+        { "text": "Sometimes - I notice obvious feedback effects", "score": 0.4 },
+        { "text": "Rarely - I think in linear cause-effect chains", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 17,
+      "dimension": "CMI",
+      "marker": "abstraction_level_fluidity",
+      "variant": 1,
+      "text": "Can you fluidly move between levels of abstraction while maintaining coherence?",
+      "context": "Zooming in and out between concrete details and abstract principles without losing the thread.",
+      "options": [
+        { "text": "Yes - I seamlessly navigate abstraction levels", "score": 1.0 },
+        { "text": "Usually - I can move levels with conscious effort", "score": 0.7 },
+        { "text": "Sometimes - I'm more comfortable at certain levels", "score": 0.4 },
+        { "text": "Rarely - I prefer to stay at one level of abstraction", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 1701,
+      "dimension": "CMI",
+      "marker": "abstraction_level_fluidity",
+      "variant": 2,
+      "text": "Can you explain the same thing at multiple levels of detail depending on the audience?",
+      "context": "Adjusting abstraction level without losing accuracy or coherence.",
+      "options": [
+        { "text": "Yes - I can present the same idea at any level of abstraction", "score": 1.0 },
+        { "text": "Usually - I can adjust level for most audiences", "score": 0.7 },
+        { "text": "Sometimes - I explain better at certain levels", "score": 0.4 },
+        { "text": "Rarely - I have a natural level I default to", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 1702,
+      "dimension": "CMI",
+      "marker": "abstraction_level_fluidity",
+      "variant": 3,
+      "text": "When debugging, can you shift between implementation details and architectural overview?",
+      "context": "Zooming in to code and out to system design while tracking the connection.",
+      "options": [
+        { "text": "Yes - I move fluidly between detail and overview", "score": 1.0 },
+        { "text": "Usually - I can shift levels when needed", "score": 0.7 },
+        { "text": "Sometimes - I'm stronger at one level than the other", "score": 0.4 },
+        { "text": "Rarely - I work mostly at one level of analysis", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 1703,
+      "dimension": "CMI",
+      "marker": "abstraction_level_fluidity",
+      "variant": 4,
+      "text": "Can you see how an abstract principle manifests in concrete situations?",
+      "context": "Instantiating - going from general rule to specific application.",
+      "options": [
+        { "text": "Yes - I automatically see abstract principles in concrete form", "score": 1.0 },
+        { "text": "Usually - I can generate concrete examples of abstractions", "score": 0.7 },
+        { "text": "Sometimes - I need prompting to see concrete manifestations", "score": 0.4 },
+        { "text": "Rarely - I keep abstractions and concretes somewhat separate", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 1704,
+      "dimension": "CMI",
+      "marker": "abstraction_level_fluidity",
+      "variant": 5,
+      "text": "Can you extract general principles from specific cases?",
+      "context": "Abstracting - going from particular instances to general rules.",
+      "options": [
+        { "text": "Yes - I naturally generalize from examples to principles", "score": 1.0 },
+        { "text": "Usually - I can identify patterns across cases", "score": 0.7 },
+        { "text": "Sometimes - I generalize when there are many similar cases", "score": 0.4 },
+        { "text": "Rarely - I treat cases as individual instances", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 18,
+      "dimension": "CMI",
+      "marker": "generative_metaphor",
+      "variant": 1,
+      "text": "Can you create novel metaphors that generate new understanding?",
+      "context": "Not just using existing metaphors but inventing new ones that reveal hidden structure.",
+      "options": [
+        { "text": "Yes - I generate original metaphors that provide new insight", "score": 1.0 },
+        { "text": "Usually - I can create metaphors when needed", "score": 0.7 },
+        { "text": "Sometimes - I use and adapt existing metaphors", "score": 0.4 },
+        { "text": "Rarely - I prefer literal description over metaphor", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 1801,
+      "dimension": "CMI",
+      "marker": "generative_metaphor",
+      "variant": 2,
+      "text": "Do metaphors help you discover things, not just communicate them?",
+      "context": "Using metaphorical mapping to reveal relationships you didn't see before.",
+      "options": [
+        { "text": "Yes - metaphors are discovery tools for me", "score": 1.0 },
+        { "text": "Usually - metaphors sometimes lead to insights", "score": 0.7 },
+        { "text": "Sometimes - metaphors mainly help me explain to others", "score": 0.4 },
+        { "text": "Rarely - metaphors are primarily communication devices", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 1802,
+      "dimension": "CMI",
+      "marker": "generative_metaphor",
+      "variant": 3,
+      "text": "Can you extend a metaphor to generate predictions it wasn't designed for?",
+      "context": "Taking a metaphorical mapping further to discover unexpected implications.",
+      "options": [
+        { "text": "Yes - I push metaphors to see what else they predict", "score": 1.0 },
+        { "text": "Usually - I explore metaphors beyond their obvious application", "score": 0.7 },
+        { "text": "Sometimes - I use metaphors within their intended scope", "score": 0.4 },
+        { "text": "Rarely - I don't tend to extend metaphors", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 1803,
+      "dimension": "CMI",
+      "marker": "generative_metaphor",
+      "variant": 4,
+      "text": "Do you notice when people are trapped by dead metaphors they don't realize they're using?",
+      "context": "Seeing how implicit metaphors constrain thinking without awareness.",
+      "options": [
+        { "text": "Yes - I see metaphorical traps that others don't notice", "score": 1.0 },
+        { "text": "Usually - I notice when metaphors become problematic", "score": 0.7 },
+        { "text": "Sometimes - I see obvious metaphorical limitations", "score": 0.4 },
+        { "text": "Rarely - I don't think much about implicit metaphors", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 1804,
+      "dimension": "CMI",
+      "marker": "generative_metaphor",
+      "variant": 5,
+      "text": "Can you find metaphors that bridge domains that seem to have nothing in common?",
+      "context": "Creating unexpected connections through metaphorical imagination.",
+      "options": [
+        { "text": "Yes - I find surprising metaphorical bridges regularly", "score": 1.0 },
+        { "text": "Usually - I can create bridging metaphors with effort", "score": 0.7 },
+        { "text": "Sometimes - I use metaphors between related domains", "score": 0.4 },
+        { "text": "Rarely - I keep domains conceptually separate", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 19,
+      "dimension": "CMI",
+      "marker": "conceptual_boundary_dissolution",
+      "variant": 1,
+      "text": "Can you dissolve apparent boundaries between concepts to see underlying unity?",
+      "context": "Recognizing when distinctions are conventional rather than fundamental.",
+      "options": [
+        { "text": "Yes - I often see that 'different' concepts are the same thing", "score": 1.0 },
+        { "text": "Usually - I can see unity when I look for it", "score": 0.7 },
+        { "text": "Sometimes - I maintain standard conceptual boundaries", "score": 0.4 },
+        { "text": "Rarely - I work with concepts as distinct entities", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 1901,
+      "dimension": "CMI",
+      "marker": "conceptual_boundary_dissolution",
+      "variant": 2,
+      "text": "Do you question whether categorical distinctions are real or conventional?",
+      "context": "Wondering whether divisions like mind/body, nature/nurture are actually coherent.",
+      "options": [
+        { "text": "Yes - I routinely question whether categories carve at joints", "score": 1.0 },
+        { "text": "Usually - I question categories that seem problematic", "score": 0.7 },
+        { "text": "Sometimes - I accept most categories as given", "score": 0.4 },
+        { "text": "Rarely - I work within established categories", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 1902,
+      "dimension": "CMI",
+      "marker": "conceptual_boundary_dissolution",
+      "variant": 3,
+      "text": "Can you see continuums where others see sharp categories?",
+      "context": "Recognizing that apparent boundaries are often points on a spectrum.",
+      "options": [
+        { "text": "Yes - I naturally see gradients rather than categories", "score": 1.0 },
+        { "text": "Usually - I recognize spectrums when I look for them", "score": 0.7 },
+        { "text": "Sometimes - I see obvious continuums", "score": 0.4 },
+        { "text": "Rarely - I think in categories by default", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 1903,
+      "dimension": "CMI",
+      "marker": "conceptual_boundary_dissolution",
+      "variant": 4,
+      "text": "Do you notice when experts in different fields are talking about the same phenomenon with different names?",
+      "context": "Seeing through disciplinary vocabulary to underlying conceptual identity.",
+      "options": [
+        { "text": "Yes - I frequently identify the same idea wearing different disciplinary costumes", "score": 1.0 },
+        { "text": "Usually - I recognize cross-disciplinary parallels", "score": 0.7 },
+        { "text": "Sometimes - I see parallels between related fields", "score": 0.4 },
+        { "text": "Rarely - I take disciplinary distinctions at face value", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 1904,
+      "dimension": "CMI",
+      "marker": "conceptual_boundary_dissolution",
+      "variant": 5,
+      "text": "Can you identify assumptions hidden in the very language used to describe a problem?",
+      "context": "Seeing how vocabulary presupposes distinctions that may not be valid.",
+      "options": [
+        { "text": "Yes - I notice how language smuggles in assumptions", "score": 1.0 },
+        { "text": "Usually - I catch linguistic assumptions when alert", "score": 0.7 },
+        { "text": "Sometimes - I notice obvious linguistic biases", "score": 0.4 },
+        { "text": "Rarely - I accept standard descriptions uncritically", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 20,
+      "dimension": "CMI",
+      "marker": "problem_space_transformation",
+      "variant": 1,
+      "text": "Can you transform a problem space to make hard problems easy?",
+      "context": "Finding representations or mappings where difficult problems become trivial.",
+      "options": [
+        { "text": "Yes - I seek transformations that dissolve problem difficulty", "score": 1.0 },
+        { "text": "Usually - I can find simplifying transformations with effort", "score": 0.7 },
+        { "text": "Sometimes - I apply known transformations when they fit", "score": 0.4 },
+        { "text": "Rarely - I solve problems in their original form", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 2001,
+      "dimension": "CMI",
+      "marker": "problem_space_transformation",
+      "variant": 2,
+      "text": "Do you look for ways to reformulate problems so solutions become obvious?",
+      "context": "Changing the problem representation until the answer jumps out.",
+      "options": [
+        { "text": "Yes - reformulation is often where I find breakthroughs", "score": 1.0 },
+        { "text": "Usually - I try reformulations when direct approaches fail", "score": 0.7 },
+        { "text": "Sometimes - I reformulate obvious problem framings", "score": 0.4 },
+        { "text": "Rarely - I work within the given problem formulation", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 2002,
+      "dimension": "CMI",
+      "marker": "problem_space_transformation",
+      "variant": 3,
+      "text": "Can you recognize when a problem is hard because of how it's being represented?",
+      "context": "Seeing that difficulty is sometimes artifactual rather than inherent.",
+      "options": [
+        { "text": "Yes - I often find that 'hard' problems are poorly represented", "score": 1.0 },
+        { "text": "Usually - I consider whether representation is the issue", "score": 0.7 },
+        { "text": "Sometimes - I blame representation when stuck", "score": 0.4 },
+        { "text": "Rarely - I assume difficulty is inherent to problems", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 2003,
+      "dimension": "CMI",
+      "marker": "problem_space_transformation",
+      "variant": 4,
+      "text": "Do you solve problems by finding the perspective from which they disappear?",
+      "context": "Not solving but dissolving - reframing so the problem doesn't arise.",
+      "options": [
+        { "text": "Yes - dissolution is often more elegant than solution", "score": 1.0 },
+        { "text": "Usually - I look for dissolving reframes when appropriate", "score": 0.7 },
+        { "text": "Sometimes - I solve directly but notice when problems dissolve", "score": 0.4 },
+        { "text": "Rarely - I focus on solving problems as given", "score": 0.1 }
+      ]
+    },
+    {
+      "id": 2004,
+      "dimension": "CMI",
+      "marker": "problem_space_transformation",
+      "variant": 5,
+      "text": "Can you invert a problem - solving for what you don't want to find what you do?",
+      "context": "Working backward, solving the dual problem, or negating the objective.",
+      "options": [
+        { "text": "Yes - inversion is a natural move in my problem-solving", "score": 1.0 },
+        { "text": "Usually - I try inversion when forward progress stalls", "score": 0.7 },
+        { "text": "Sometimes - I invert when someone suggests it", "score": 0.4 },
+        { "text": "Rarely - I approach problems in their natural direction", "score": 0.1 }
+      ]
+    }
+  ]
+}

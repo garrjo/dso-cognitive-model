@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DS2 - Dual-Structure Intelligence Assessment</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-brand">
+                <div class="logo">DS2</div>
+                <div class="header-title">
+                    <h1>Dual-Structure Intelligence Assessment</h1>
+                    <span class="subtitle">Behavioral Marker Evaluation: AMI + CMI</span>
+                </div>
+            </div>
+            <div class="header-actions">
+                <button class="theme-toggle" onclick="toggleTheme()" title="Toggle theme">
+                    <span class="theme-icon-light">&#9728;</span>
+                    <span class="theme-icon-dark">&#9790;</span>
+                </button>
+                <div class="header-progress" id="headerProgress">
+                    <span class="progress-text">Question <span id="currentQ">0</span> of <span id="totalQ">20</span></span>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Welcome Screen -->
+            <section class="screen welcome-screen active" id="welcomeScreen">
+                <div class="welcome-content">
+                    <div class="welcome-logo">DS2</div>
+                    <h1>Dual-Structure Intelligence Model</h1>
+                    <p class="welcome-subtitle">Cognitive Architecture Assessment</p>
+
+                    <div class="welcome-description">
+                        <p>This assessment evaluates two complementary dimensions of cognitive capability:</p>
+
+                        <div class="dimension-cards">
+                            <div class="dimension-card ami">
+                                <h3>AMI</h3>
+                                <h4>Analytical Mechanics Intelligence</h4>
+                                <ul>
+                                    <li>Symbolic consistency detection</li>
+                                    <li>Multi-variable manipulation</li>
+                                    <li>First-principles derivation</li>
+                                    <li>Boundary condition checking</li>
+                                    <li>Formal proof construction</li>
+                                </ul>
+                            </div>
+                            <div class="dimension-card cmi">
+                                <h3>CMI</h3>
+                                <h4>Conceptual Morphogenesis Intelligence</h4>
+                                <ul>
+                                    <li>Ontology generation</li>
+                                    <li>Reference frame shifting</li>
+                                    <li>Paradox tolerance</li>
+                                    <li>Concept compression</li>
+                                    <li>Analogical transfer</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="dss-types-preview">
+                            <h4>Four DSS Classifications:</h4>
+                            <div class="types-grid">
+                                <span class="type-badge dss1">DSS-I: Systematic Analytical</span>
+                                <span class="type-badge dss2">DSS-II: Creative Conceptual</span>
+                                <span class="type-badge dss3">DSS-III: Integrated Polymathic</span>
+                                <span class="type-badge dss4">DSS-IV: Developing Foundational</span>
+                            </div>
+                        </div>
+
+                        <p class="welcome-note">20 behavioral marker questions - approximately 5 minutes</p>
+                    </div>
+
+                    <!-- Demographics Section -->
+                    <div class="demographics-section">
+                        <h4>For calibrated scoring, please provide:</h4>
+                        <div class="demographics-inputs">
+                            <div class="demo-field">
+                                <label for="userAge">Age</label>
+                                <input type="number" id="userAge" min="12" max="100" placeholder="e.g., 35" class="demo-input">
+                            </div>
+                        </div>
+                        <p class="demo-note">Age is used for normative adjustment. Scoring accounts for cognitive development and age-related factors.</p>
+                    </div>
+
+                    <button class="btn btn-primary btn-large" onclick="startAssessment()">
+                        Begin Assessment
+                    </button>
+                </div>
+            </section>
+
+            <!-- Question Screen -->
+            <section class="screen question-screen" id="questionScreen">
+                <div class="question-container">
+                    <div class="question-header">
+                        <span class="question-dimension" id="questionDimension">AMI</span>
+                        <span class="question-marker" id="questionMarker">Behavioral Marker</span>
+                    </div>
+
+                    <div class="question-content">
+                        <h2 class="question-text" id="questionText">Loading question...</h2>
+                        <p class="question-context" id="questionContext">Context will appear here.</p>
+                    </div>
+
+                    <div class="options-container" id="optionsContainer">
+                        <!-- Options will be populated by JS -->
+                    </div>
+
+                    <div class="question-navigation">
+                        <button class="btn btn-secondary" id="prevBtn" onclick="previousQuestion()" disabled>
+                            Previous
+                        </button>
+                        <button class="btn btn-primary" id="nextBtn" onclick="nextQuestion()" disabled>
+                            Next Question
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Results Screen -->
+            <section class="screen results-screen" id="resultsScreen">
+                <div class="results-container">
+                    <h1>Assessment Complete</h1>
+
+                    <div class="results-grid">
+                        <!-- DS2 Profile Card -->
+                        <div class="result-card profile-card">
+                            <div class="dss-type-display">
+                                <div class="dss-badge" id="resultDSSBadge">DSS-III</div>
+                                <div class="dss-name" id="resultDSSName">Integrated Polymathic</div>
+                            </div>
+
+                            <div class="scores-row">
+                                <div class="score-display ami">
+                                    <div class="score-ring">
+                                        <svg viewBox="0 0 100 100">
+                                            <defs>
+                                                <linearGradient id="amiAgeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                                    <stop offset="0%" style="stop-color:#ef4444;stop-opacity:0.3"/>
+                                                    <stop offset="100%" style="stop-color:#94a3b8;stop-opacity:0.5"/>
+                                                </linearGradient>
+                                            </defs>
+                                            <circle class="score-ring-bg" cx="50" cy="50" r="45"/>
+                                            <circle class="score-ring-bg outer" cx="50" cy="50" r="38"/>
+                                            <circle class="score-ring-fill" id="amiRing" cx="50" cy="50" r="45"/>
+                                            <circle class="score-ring-age" id="amiAgeRing" cx="50" cy="50" r="45"/>
+                                            <circle class="score-ring-potential" id="amiPotentialRing" cx="50" cy="50" r="38"/>
+                                        </svg>
+                                        <div class="score-value" id="resultAMI">0.0</div>
+                                    </div>
+                                    <div class="score-label">AMI</div>
+                                    <div class="score-sublabel">Analytical Mechanics</div>
+                                    <div class="potential-label" id="amiPotentialLabel"></div>
+                                </div>
+
+                                <!-- IQ Donut (center) -->
+                                <div class="score-display iq-donut">
+                                    <div class="score-ring iq-ring-wrapper">
+                                        <svg viewBox="0 0 100 100">
+                                            <defs>
+                                                <linearGradient id="iqFloorGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                                    <stop offset="0%" style="stop-color:#ef4444"/>
+                                                    <stop offset="100%" style="stop-color:#f59e0b"/>
+                                                </linearGradient>
+                                                <linearGradient id="iqCeilingGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                                    <stop offset="0%" style="stop-color:#8b5cf6"/>
+                                                    <stop offset="100%" style="stop-color:#06b6d4"/>
+                                                </linearGradient>
+                                            </defs>
+                                            <circle class="score-ring-bg" cx="50" cy="50" r="45"/>
+                                            <circle class="iq-ring-floor" id="iqFloorRing" cx="50" cy="50" r="45"/>
+                                            <circle class="iq-ring-ceiling" id="iqCeilingRing" cx="50" cy="50" r="45"/>
+                                            <!-- Hash marks for floor, ceiling, and nominal -->
+                                            <line id="iqFloorMark" class="iq-hash-mark floor" x1="50" y1="1" x2="50" y2="9"/>
+                                            <line id="iqCeilingMark" class="iq-hash-mark ceiling" x1="50" y1="1" x2="50" y2="9"/>
+                                            <circle id="iqNominalDot" class="iq-nominal-dot" cx="50" cy="5" r="3"/>
+                                        </svg>
+                                        <div class="score-value iq-center-value" id="iqDonutNominal">
+                                            <span class="dq-raw" id="dqRawValue">151</span><span class="dq-aai" id="dqAAIValue"></span>
+                                        </div>
+                                        <div class="iq-popover" id="iqPopover">
+                                            <div class="iq-popover-title">DQ Range</div>
+                                            <div class="iq-popover-row floor"><span>Floor:</span><span id="iqPopoverFloor">132</span></div>
+                                            <div class="iq-popover-row nominal"><span>Nominal:</span><span id="iqPopoverNominal">151</span></div>
+                                            <div class="iq-popover-row ceiling"><span>Ceiling:</span><span id="iqPopoverCeiling">170</span></div>
+                                            <div class="iq-popover-bandwidth">Bandwidth: <span id="iqPopoverBandwidth">38</span></div>
+                                            <div class="iq-popover-row aai" id="iqPopoverAAIRow"><span>AAI:</span><span id="iqPopoverAAI">+0</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="score-label">DQ</div>
+                                    <div class="score-sublabel">Derived IQ</div>
+                                </div>
+
+                                <div class="score-display cmi">
+                                    <div class="score-ring">
+                                        <svg viewBox="0 0 100 100">
+                                            <defs>
+                                                <linearGradient id="cmiAgeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                                    <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:0.3"/>
+                                                    <stop offset="100%" style="stop-color:#94a3b8;stop-opacity:0.5"/>
+                                                </linearGradient>
+                                            </defs>
+                                            <circle class="score-ring-bg" cx="50" cy="50" r="45"/>
+                                            <circle class="score-ring-bg outer" cx="50" cy="50" r="38"/>
+                                            <circle class="score-ring-fill" id="cmiRing" cx="50" cy="50" r="45"/>
+                                            <circle class="score-ring-age" id="cmiAgeRing" cx="50" cy="50" r="45"/>
+                                            <circle class="score-ring-potential" id="cmiPotentialRing" cx="50" cy="50" r="38"/>
+                                        </svg>
+                                        <div class="score-value" id="resultCMI">0.0</div>
+                                    </div>
+                                    <div class="score-label">CMI</div>
+                                    <div class="score-sublabel">Conceptual Morphogenesis</div>
+                                    <div class="potential-label" id="cmiPotentialLabel"></div>
+                                </div>
+                            </div>
+
+                            <!-- Growth Potential -->
+                            <div class="iq-growth-section">
+                                <div class="iq-growth-potential" id="iqGrowthPotential"></div>
+                            </div>
+                        </div>
+
+                        <!-- Architecture Map + Markers Row -->
+                        <div class="result-card viz-markers-row">
+                            <div class="viz-section">
+                                <h3>Cognitive Architecture Map</h3>
+                                <div class="ds2-grid-viz">
+                                    <div class="grid-label-y">AMI</div>
+                                    <div class="grid-canvas">
+                                        <div class="quadrant q1">DSS-I<br><small>Analytical</small></div>
+                                        <div class="quadrant q3">DSS-III<br><small>Polymathic</small></div>
+                                        <div class="quadrant q4">DSS-IV<br><small>Foundational</small></div>
+                                        <div class="quadrant q2">DSS-II<br><small>Conceptual</small></div>
+                                        <div class="grid-marker" id="resultMarker"></div>
+                                    </div>
+                                    <div class="grid-label-x">CMI</div>
+                                </div>
+                            </div>
+                            <div class="markers-section">
+                                <h3>Behavioral Marker Breakdown</h3>
+                                <div class="markers-split">
+                                    <div class="markers-column">
+                                        <h4 class="ami-header">AMI Markers</h4>
+                                        <div id="amiMarkers"></div>
+                                    </div>
+                                    <div class="markers-column">
+                                        <h4 class="cmi-header">CMI Markers</h4>
+                                        <div id="cmiMarkers"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Type Probabilities + Profile Summary Row -->
+                        <div class="result-card prob-summary-row">
+                            <div class="prob-section">
+                                <h3>Type Probability Distribution</h3>
+                                <canvas id="probChart"></canvas>
+                            </div>
+                            <div class="summary-section">
+                                <h3>Profile Interpretation</h3>
+                                <div id="profileInterpretation"></div>
+                            </div>
+                        </div>
+
+                        <!-- Compatibility Matrix (Types + Domains) -->
+                        <div class="result-card compatibility-card">
+                            <h3>Compatibility Matrix</h3>
+
+                            <div class="compat-section">
+                                <h4 class="section-subhead">Type Synergy</h4>
+                                <p class="compat-subtitle">How your cognitive architecture synergizes with other types</p>
+                                <div class="compat-grid" id="compatGrid"></div>
+                                <div class="compat-legend">
+                                    <span class="legend-item"><span class="dot synergy"></span> High Synergy</span>
+                                    <span class="legend-item"><span class="dot complementary"></span> Complementary</span>
+                                    <span class="legend-item"><span class="dot neutral"></span> Neutral</span>
+                                    <span class="legend-item"><span class="dot friction"></span> Potential Friction</span>
+                                </div>
+                            </div>
+
+                            <div class="domains-section">
+                                <h4 class="section-subhead">Domain Fit & Innovation Vectors</h4>
+                                <div class="domains-grid">
+                                    <div class="domain-section">
+                                        <h5>Breakthrough Domains</h5>
+                                        <div id="breakthroughDomains"></div>
+                                    </div>
+                                    <div class="domain-section">
+                                        <h5>High-Fit Domains</h5>
+                                        <div id="highFitDomains"></div>
+                                    </div>
+                                    <div class="domain-section">
+                                        <h5>Innovation Vector</h5>
+                                        <div id="innovationVector"></div>
+                                    </div>
+                                    <div class="domain-section">
+                                        <h5>Productivity Pattern</h5>
+                                        <div id="productivityPattern"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- JSON Output -->
+                    <div class="json-section">
+                        <div class="json-header">
+                            <h3>DS2 Profile (JSON)</h3>
+                            <button class="btn btn-sm" onclick="copyJSON()">Copy JSON</button>
+                        </div>
+                        <pre id="jsonOutput">{}</pre>
+                    </div>
+
+                    <div class="results-actions">
+                        <button class="btn btn-secondary" onclick="resetAssessment()">
+                            Take Assessment Again
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>DS2 Cognitive Assessment - Open Source</p>
+            <p><a href="https://github.com/yourusername/ds2-assessment" target="_blank">GitHub</a></p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
