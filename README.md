@@ -190,7 +190,9 @@ DS2 is designed with psychometric principles:
 - Bayesian probability calculations for type classification
 - Age-adjusted normative scoring
 
-**Current status:** The model is operationally complete but awaiting formal validation studies. Contributions to validation research are welcome.
+**Current status:** No formal validation has been conducted, and we are not actively seeking formal validation at this time. The model is operationally complete and available for use.
+
+**Community validation:** If you wish to conduct validation research, you're welcome to do so. Please document your findings in the [project wiki](https://github.com/garrjo/dso-cognitive-model/wiki) so others can benefit from your work.
 
 ---
 
